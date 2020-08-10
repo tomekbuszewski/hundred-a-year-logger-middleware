@@ -1,7 +1,8 @@
-import morgan from "morgan";
+import  morgan from "morgan";
 import { createStream } from "rotating-file-stream";
 import { join } from "path";
 import * as http from "http";
+import { IncomingMessage, ServerResponse } from "http";
 
 type LoggerFormat = "combined" | "common" | "dev" | "short";
 
@@ -24,7 +25,7 @@ const accessLog = (filename: string, format: LoggerFormat = "combined"): Respons
 
 const errorLog = (format: LoggerFormat = "combined"): ResponseHandler => {
   return morgan(format, {
-    skip: (req, res) => res.statusCode < 400,
+    skip: (req: IncomingMessage, res: ServerResponse) => res.statusCode < 400,
   });
 };
 
