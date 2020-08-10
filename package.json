@@ -2,7 +2,7 @@
   "name": "hundred-a-year-logger",
   "version": "1.0.0",
   "description": "",
-  "main": "./index.ts",
+  "main": "./index.js",
   "types": "./index.d.ts",
   "scripts": {
     "build": "tsc --declaration"
