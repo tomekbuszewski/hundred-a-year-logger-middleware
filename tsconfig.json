@@ -9,7 +9,7 @@
     "isolatedModules": true,
     "jsx": "react",
     "lib": ["es6", "dom"],
-    "module": "es2015",
+    "module": "commonjs",
     "moduleResolution": "node",
     "noEmit": false,
     "sourceMap": true,
